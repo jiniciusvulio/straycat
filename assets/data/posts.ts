@@ -9,9 +9,9 @@ const posts = [
         'https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt2552ecf89c99a831/60ee0da8c941f329772e4d87/Galio_updated_splash.jpg',
     },
     createdAt: '2020-08-27T12:00:00.000Z',
-    content: "Is Galio mid still usable on the current patch? I don't play League for a year now",
+    content: "Galio mid ainda serve pra alguma coisa em 2023? Graças a Deus parei de jogar esse jogo do capeta, saiam de League of Legends enquanto há tempo, amém irmãos",
     image:
-      'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/thumbnail.png',
+      'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_6.jpg',
     comments: 123,
     reposts: 11,
     likes: 10,
@@ -44,7 +44,7 @@ const posts = [
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/zuck.jpeg',
     },
     content: "Facebook will always be better than Twitter, DogeCoin = sh!t",
-    image: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/8.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/2560px-Facebook_New_Logo_%282015%29.svg.png',
     comments: 10,
     reposts: 20,
     likes: 100,
@@ -105,10 +105,10 @@ const posts = [
     id: 't3',
     user: {
       id: 'u1',
-      username: 'LuxLoL',
-      name: 'Luxianna',
+      username: 'elonmusk',
+      name: 'Elon Musk',
       image:
-        'https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9f9df38e50f393d4/60ee0f4c5eda9722617c575e/Lux_0.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg',
     },
     createdAt: '2020-08-27T12:00:00.000Z',
     content: 'Hello World',
@@ -120,10 +120,10 @@ const posts = [
     id: 't4',
     user: {
       id: 'u1',
-      username: 'LuxLoL',
-      name: 'Luxianna',
+      username: 'elonmusk',
+      name: 'Elon Musk',
       image:
-        'https://images.contentstack.io/v3/assets/blt187521ff0727be24/blt9f9df38e50f393d4/60ee0f4c5eda9722617c575e/Lux_0.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/1200px-Elon_Musk_Royal_Society_%28crop2%29.jpg',
     },
     createdAt: '2020-08-27T12:00:00.000Z',
     content:
