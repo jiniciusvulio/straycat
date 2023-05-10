@@ -1,22 +1,9 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, Pressable } from "react-native";
 import { PostType } from "../types";
-import { Entypo, EvilIcons } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
+import { Link } from "expo-router";
 
-type IconButtonProps = {
-  icon: React.ComponentProps<typeof EvilIcons>['name'];
-  text?: string | number;
-}
-
-const IconButton = ({ icon, text }: IconButtonProps) => {
-  return (
-    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-      {/* ICON */}
-      <EvilIcons name={icon} size={22} color="gray" />
-      {/* STATS */}
-      <Text style={{ fontSize: 12, color: 'gray' }}>{text}</Text>
-    </View>
-  )
-}
+import IconButton from "./IconButton";
 
 type PostProps = {
   post: PostType;
@@ -24,30 +11,32 @@ type PostProps = {
 
 const Post = ({ post }: PostProps) => {
   return (
-    <View style={ styles.container }>
-      <Image src={ post.user.image } style={ styles.userImage } />
-      
-      <View style={ styles.mainContainer }>
-        <View style={{ flexDirection: 'row' }}>
-
-          <Text style={ styles.name }>{ post.user.name }</Text>
-          <Text style={ styles.handle }>@{ post.user.username } · 2h</Text>
-          <Entypo name="dots-three-horizontal" size={16} color="gray" style={{ marginLeft: 'auto' }} />
-        </View>
+    <Link href={`/post/${ post.id }` } asChild>
+      <Pressable style={ styles.container }>
+        <Image src={ post.user.image } style={ styles.userImage } />
         
-        <Text style={ styles.content }>{ post.content }</Text>
-    
-        {post.image && <Image src={ post.image } style={ styles.image } />}
+        <View style={ styles.mainContainer }>
+          <View style={{ flexDirection: 'row' }}>
 
-        <View style={ styles.footer }>
-          <IconButton icon="comment" text={ post.comments } />          
-          <IconButton icon="share-google" text={ post.reposts } />          
-          <IconButton icon="like" text={ post.likes } />          
-          <IconButton icon="chart" text={ post.impressions || 0 } />          
-          <IconButton icon="share-apple" />          
+            <Text style={ styles.name }>{ post.user.name }</Text>
+            <Text style={ styles.handle }>@{ post.user.username } · 2h</Text>
+            <Entypo name="dots-three-horizontal" size={16} color="gray" style={{ marginLeft: 'auto' }} />
+          </View>
+          
+          <Text style={ styles.content }>{ post.content }</Text>
+      
+          {post.image && <Image src={ post.image } style={ styles.image } />}
+
+          <View style={ styles.footer }>
+            <IconButton icon="comment" text={ post.comments } />          
+            <IconButton icon="share-google" text={ post.reposts } />          
+            <IconButton icon="like" text={ post.likes } />          
+            <IconButton icon="chart" text={ post.impressions || 0 } />          
+            <IconButton icon="share-apple" />          
+          </View>
         </View>
-      </View>
-    </View>
+      </Pressable>
+    </Link>
   );
 }
 
